@@ -81,11 +81,15 @@
       margin-bottom: 0.4rem;
     }
 
+    /* LOGO CENTERING - FIXED (desktop + mobile) */
+    .logo-container {
+      text-align: center;
+      margin-bottom: 25px;
+    }
     .logo {
-      display: block;
-      margin: 0 auto 25px auto;
-      width: 220px;
+      display: inline-block;
       max-width: 70%;
+      width: 220px;
       border-radius: 30px;
       background: rgba(255,255,255,0.02);
       padding: 6px 0;
@@ -292,7 +296,7 @@
       }
     }
 
-    /* ---------- PRINT STYLES (clean, same as second file) ---------- */
+    /* ---------- PRINT STYLES (clean) ---------- */
     @media print {
       body {
         background: white;
@@ -347,8 +351,10 @@
 <body>
 
 <div class="wrapper">
-  <!-- logo placeholder (EPIC original) -->
-  <img src="https://assets.cdn.filesafe.space/YzjwmP6zpvDUp28hrM1o/media/687edb257f24c671f43bb1cb.png"logo" alt="EPIC Models & Talent logo" loading="lazy">
+  <!-- logo container: fixed centering on all screen sizes -->
+  <div class="logo-container">
+    <img src="YOUR_EPIC_LOGO_URL_HERE" class="logo" alt="EPIC Models & Talent logo" loading="lazy">
+  </div>
 
   <h1>EPIC Models & Talent<br>Model Release Agreement</h1>
 
@@ -470,7 +476,7 @@
       ctx.lineCap = 'round';
       ctx.lineJoin = 'round';
       ctx.strokeStyle = '#000';
-      // clear any previous drawing state after resize (standard behavior)
+      // preserve white background after resize
       ctx.fillStyle = '#fff';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
     }
@@ -537,11 +543,14 @@
       ctx.beginPath();
     };
 
-    // initial background white
+    // initial white background
     ctx.fillStyle = '#fff';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    // ---------- FORM SUBMISSION (EPIC payload, placeholder endpoint, fully responsive) ----------
+    // ---------- FORM SUBMISSION (CORRECTED Web App URL) ----------
+    // Your provided Google Apps Script URL (directly integrated)
+    const WEBAPP_URL = 'https://script.google.com/macros/s/AKfycbx-gWdzMO1oN6bNRJ2huOZgYgtfE23_GrclWxQlsJ1Dycn7GsWY20DWMv5b41k0wsP3kg/exec';
+
     window.submitAgreement = async function() {
       const name = document.getElementById('name').value.trim();
       const email = document.getElementById('email').value.trim();
@@ -566,7 +575,7 @@
         const data = await resp.json();
         ip = data.ip;
       } catch (e) {
-        // ip fetch fails silently, keep fallback
+        console.warn('Could not fetch IP:', e);
       }
 
       const payload = {
@@ -580,13 +589,18 @@
         timestamp: new Date().toISOString()
       };
 
-      // Replace with your backend endpoint (Google Apps Script / custom webhook)
-      // Original placeholder from first agreement: "YOUR_WEBAPP_URL_HERE"
-      const endpoint = 'https://script.google.com/macros/s/AKfycbx-gWdzMO1oN6bNRJ2huOZgYgtfE23_GrclWxQlsJ1Dycn7GsWY20DWMv5b41k0wsP3kg/exec';
+      // Disable submit button to avoid double submission (optional improvement)
+      const submitBtn = document.querySelector('button[onclick="submitAgreement()"]');
+      const originalText = submitBtn ? submitBtn.innerText : 'Submit';
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerText = 'Submitting...';
+      }
 
       try {
-        const response = await fetch(endpoint, {
+        const response = await fetch(WEBAPP_URL, {
           method: 'POST',
+          mode: 'cors',               // explicit cors mode
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload)
         });
@@ -595,10 +609,10 @@
         try {
           result = await response.json();
         } catch (e) {
-          result = { status: 'error', message: 'Invalid server response' };
+          result = { status: 'error', message: 'Invalid JSON response from server' };
         }
 
-        if (result && result.status === 'success') {
+        if (response.ok && result && result.status === 'success') {
           // success: hide form, show success message
           const formSection = document.getElementById('formSection');
           formSection.style.opacity = '0';
@@ -608,11 +622,20 @@
             successEl.classList.add('show');
           }, 300);
         } else {
-          alert('Submission error: ' + (result?.message || 'Unknown issue. Please try again.'));
+          // Provide detailed error if possible
+          const errorMsg = result?.message || `Server responded with ${response.status}: ${response.statusText}`;
+          alert(`Submission failed: ${errorMsg}\n\nPlease try again or contact support.`);
+          console.error('Server error details:', result);
         }
       } catch (err) {
-        alert('Network error — please check your connection and try again.');
-        console.error('Submission error:', err);
+        console.error('Network/Fetch error:', err);
+        alert(`Network error — unable to reach server.\n\nDetails: ${err.message}\n\nPlease check your internet connection and ensure the Google Apps Script is deployed to run as "Anyone" (including anonymous).`);
+      } finally {
+        // Re-enable submit button if still visible (form not hidden)
+        if (submitBtn && document.getElementById('formSection').style.display !== 'none') {
+          submitBtn.disabled = false;
+          submitBtn.innerText = originalText;
+        }
       }
     };
   })();
