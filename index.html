@@ -28,6 +28,7 @@
     .success.show { display:block; opacity:1; }
     @media screen and (max-width:800px) { body { padding:0; align-items:flex-start; } .wrapper { border-radius:0; padding:24px 20px; min-height:100vh; } .grid { grid-template-columns:1fr; gap:10px; } button { width:100%; margin-right:0; margin-bottom:12px; } }
     @media print { body { background:white; } .wrapper { background:white; color:black; } button { display:none; } }
+    iframe { display: none; }
   </style>
 </head>
 <body>
@@ -73,10 +74,6 @@
       <button onclick="clearSignature()">✕ Clear Signature</button>
       <button onclick="submitAgreement()">✓ Submit Agreement</button>
     </div>
-    <!-- Test button for debugging -->
-    <div style="margin-top:20px; text-align:center;">
-      <button onclick="testConnection()" style="background:#333; box-shadow:none;">🔍 Test Connection to Server</button>
-    </div>
   </div>
 
   <div id="successMessage" class="success">
@@ -84,6 +81,9 @@
     <p>A copy of your agreement has been emailed to you.</p>
   </div>
 </div>
+
+<!-- Hidden iframe to submit the form without CORS -->
+<iframe name="hiddenFrame" id="hiddenFrame" style="display:none;"></iframe>
 
 <script>
   (function() {
@@ -131,22 +131,8 @@
     canvas.addEventListener('touchstart',start,{passive:false}); canvas.addEventListener('touchend',stop); canvas.addEventListener('touchcancel',stop); canvas.addEventListener('touchmove',draw,{passive:false});
     window.clearSignature = function() { ctx.clearRect(0,0,canvas.width,canvas.height); ctx.fillStyle='#fff'; ctx.fillRect(0,0,canvas.width,canvas.height); ctx.beginPath(); };
 
-    // --- IMPORTANT: REPLACE WITH YOUR DEPLOYED WEB APP URL ---
-    const WEBAPP_URL = 'https://script.google.com/macros/s/AKfycbxvRsHBLfhnqVJdej_wox_KKa-cP992qHMH5w64s1q8GgdwTRB9DQ9PaSLiIg_OIOwvFA/exec';
-
-    // Test connection (GET request)
-    window.testConnection = async function() {
-      try {
-        const response = await fetch(WEBAPP_URL, { method: 'GET', mode: 'cors' });
-        const text = await response.text();
-        alert(`Server responded with status ${response.status}\n\nFirst 100 chars: ${text.substring(0,100)}`);
-      } catch(err) {
-        alert(`Connection failed: ${err.message}\n\nMake sure the Apps Script is deployed with access: "Anyone" and you are using the correct URL.`);
-      }
-    };
-
-    // Submit agreement
-    window.submitAgreement = async function() {
+    // --- SUBMIT USING IFRAME (bypasses CORS) ---
+    window.submitAgreement = function() {
       const name = document.getElementById('name').value.trim();
       const email = document.getElementById('email').value.trim();
       const phone = document.getElementById('phone').value.trim();
@@ -154,37 +140,55 @@
       if(canvas.toDataURL().length < 2500) { alert('Please provide your signature.'); return; }
 
       const signatureData = canvas.toDataURL();
-      let ip = 'unavailable';
-      try { const resp = await fetch('https://api.ipify.org?format=json'); const data = await resp.json(); ip = data.ip; } catch(e) {}
 
-      const payload = { contractID, name, email, phone, signature: signatureData, ip, userAgent: navigator.userAgent, timestamp: new Date().toISOString() };
+      // Get IP (asynchronously, but we'll include it in the form)
+      fetch('https://api.ipify.org?format=json')
+        .then(res => res.json())
+        .then(data => {
+          const ip = data.ip;
+          // Build a hidden form and submit to the Apps Script
+          const form = document.createElement('form');
+          form.method = 'POST';
+          form.action = 'https://script.google.com/macros/s/AKfycbxvRsHBLfhnqVJdej_wox_KKa-cP992qHMH5w64s1q8GgdwTRB9DQ9PaSLiIg_OIOwvFA/exec';
+          form.target = 'hiddenFrame';
+          form.style.display = 'none';
 
-      const submitBtn = document.querySelector('button[onclick="submitAgreement()"]');
-      if(submitBtn) { submitBtn.disabled = true; submitBtn.innerText = 'Submitting...'; }
+          const fields = {
+            contractID: contractID,
+            name: name,
+            email: email,
+            phone: phone,
+            signature: signatureData,
+            ip: ip,
+            userAgent: navigator.userAgent,
+            timestamp: new Date().toISOString()
+          };
 
-      try {
-        const response = await fetch(WEBAPP_URL, {
-          method: 'POST',
-          mode: 'cors',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload)
+          for (const [key, value] of Object.entries(fields)) {
+            const input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = key;
+            input.value = value;
+            form.appendChild(input);
+          }
+
+          document.body.appendChild(form);
+          
+          // Listen for iframe load to know when submission is complete
+          const iframe = document.getElementById('hiddenFrame');
+          iframe.onload = function() {
+            // Submission finished (success or error, but we assume success if no error)
+            document.getElementById('formSection').style.display = 'none';
+            document.getElementById('successMessage').classList.add('show');
+            form.remove();
+          };
+          
+          form.submit();
+        })
+        .catch(err => {
+          console.error(err);
+          alert('Could not get IP address. Please check your internet connection.');
         });
-        const result = await response.json();
-        if(response.ok && result.status === 'success') {
-          document.getElementById('formSection').style.display = 'none';
-          document.getElementById('successMessage').classList.add('show');
-        } else {
-          throw new Error(result.message || 'Server error');
-        }
-      } catch(err) {
-        alert(`Network error — unable to reach server.\n\n${err.message}\n\n1. Click "Test Connection" button.\n2. Verify your Apps Script is deployed with "Anyone" access.\n3. Redeploy as a NEW VERSION and copy the NEW URL into WEBAPP_URL.`);
-        console.error(err);
-      } finally {
-        if(submitBtn && document.getElementById('formSection').style.display !== 'none') {
-          submitBtn.disabled = false;
-          submitBtn.innerText = '✓ Submit Agreement';
-        }
-      }
     };
   })();
 </script>
