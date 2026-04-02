@@ -1,395 +1,691 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- BLOCK 1: TITLE -->
-<title>EPIC Models & Talent Agreement</title>
-
-<!-- BLOCK 2: STYLES -->
-<style>
-
-/* ===== BLOCK 2A: RESET ===== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* ===== BLOCK 2B: BODY ===== */
-body {
-  background: #050505;
-  font-family: Arial, sans-serif;
-  color: #eee;
-  padding: 40px;
-  line-height: 1.5;
-  font-size: 16px;
-}
-
-/* ===== BLOCK 2C: WRAPPER ===== */
-.wrapper {
-  max-width: 1100px;
-  margin: auto;
-  background: #0c0c0c;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 0 50px rgba(0,0,0,.9);
-}
-
-/* ===== BLOCK 2D: LOGO ===== */
-.logo {
-  display: block;
-  margin: 0 auto 20px auto;
-  width: 220px;
-  border-radius: 25px;
-}
-
-/* ===== BLOCK 2E: HEADINGS ===== */
-h1 {
-  text-align: center;
-  color: #d4af37;
-  margin-bottom: 10px;
-  line-height: 1.2;
-}
-
-h2, h3 {
-  color: #d4af37;
-}
-
-/* ===== BLOCK 2F: CONTRACT ID ===== */
-.contract-id {
-  text-align: center;
-  color: #aaa;
-  font-size: 14px;
-  margin-bottom: 60px;
-}
-
-/* ===== BLOCK 2G: GRID ===== */
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-}
-
-/* ===== BLOCK 2H: TEXT SPACING ===== */
-p, ul {
-  margin-bottom: 24px;
-}
-
-/* ===== BLOCK 2I: FORM ===== */
-.form-section {
-  border-top: 1px solid #333;
-  padding-top: 35px;
-}
-
-input {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
-  border-radius: 6px;
-  border: none;
-  background: #222;
-  color: #eee;
-}
-
-/* ===== BLOCK 2J: SIGNATURE ===== */
-canvas {
-  background: white;
-  border-radius: 6px;
-  width: 100%;
-  height: 160px;
-  cursor: crosshair;
-}
-
-/* ===== BLOCK 2K: BUTTONS ===== */
-button {
-  background: #d4af37;
-  border: none;
-  padding: 12px 20px;
-  font-weight: bold;
-  border-radius: 6px;
-  cursor: pointer;
-  margin-top: 10px;
-  margin-right: 10px;
-  color: #0c0c0c;
-}
-
-button:hover {
-  background: #f0c94a;
-}
-
-/* ===== BLOCK 2L: SUCCESS ===== */
-.success {
-  display: none;
-  opacity: 0;
-  margin-top: 40px;
-  padding: 30px;
-  background: #111;
-  border: 1px solid #d4af37;
-  border-radius: 10px;
-  text-align: center;
-  transition: opacity .5s ease;
-}
-
-.success.show {
-  display: block;
-  opacity: 1;
-}
-
-/* ===== BLOCK 2M: MOBILE ===== */
-@media (max-width: 900px) {
-  .grid {
-    grid-template-columns: 1fr;
-    gap: 60px;
-  }
-
-  h1 {
-    font-size: 24px;
-  }
-}
-
-</style>
-</head>
-
-<body>
-
-<div class="wrapper">
-
-<!-- BLOCK 3: LOGO -->
-<img src="https://assets.cdn.filesafe.space/YzjwmP6zpvDUp28hrM1o/media/687edb257f24c671f43bb1cb.png" class="logo" alt="EPIC Models & Talent logo">
-
-<!-- BLOCK 4: HEADER -->
-<h1>EPIC Models & Talent<br>Model Release Agreement (M Resort)</h1>
-
-<div class="contract-id">
-Contract ID: <span id="contractID"></span>
-</div>
-
-<!-- BLOCK 5: AGREEMENT -->
-<div class="grid">
-
-<div>
-
-<h3>1. Scope of Work</h3>
-<p>
-Model agrees to participate in a photo and video shoot on April 7, 2026,
-from 9:30 AM – 11:30 AM at M Resort Spa Casino, Henderson, NV.
-</p>
-
-<p>
-Model must arrive by <strong>9:15 AM</strong> at the main parking lot and be fully ready.
-Model agrees to arrive at least 15 minutes early.
-</p>
-
-<h3>2. On-Set Requirements</h3>
-<p>
-No photos or videos are permitted on set at any time.
-Model must follow all direction and maintain professional conduct.
-</p>
-
-<h3>3. Rights & Usage</h3>
-<p>
-Model grants EPIC Models & Talent unrestricted, worldwide rights to use all content
-for marketing, advertising, and commercial purposes.
-</p>
-
-</div>
-
-<div>
-
-<h3>4. Limitations</h3>
-<p>
-Content will not be used in a defamatory, illegal, or pornographic manner.
-Model name and personal information will not be used without consent.
-</p>
-
-<h3>5. Compensation</h3>
-<p>
-Model will be paid upon completion of the shoot.
-Payment method will be agreed upon with EPIC Models & Talent.
-</p>
-
-<h3>6. Ownership</h3>
-<p>
-All content is the exclusive property of EPIC Models & Talent and/or its clients.
-</p>
-
-<h3>7. Social Media Restrictions</h3>
-<p>
-No posting or sharing content while on set or before official release.
-No personal content capture unless approved.
-Posting requires written approval.
-Approved posts must tag @epicmodelsandtalent.
-No paid or third-party use without consent.
-EPIC may request removal within 24 hours.
-</p>
-
-</div>
-
-</div>
-
-<!-- BLOCK 6: FORM -->
-<div class="form-section" id="formSection">
-
-<h2>Model Information</h2>
-
-<input id="name" placeholder="Full Name">
-<input id="email" placeholder="Email Address">
-<input id="phone" placeholder="Phone Number (Optional)">
-
-<h3>Signature</h3>
-
-<canvas id="signature-pad"></canvas>
-
-<br>
-
-<button onclick="clearSignature()">Clear Signature</button>
-<button onclick="submitAgreement()">Submit Agreement</button>
-
-</div>
-
-<!-- BLOCK 7: SUCCESS -->
-<div id="successMessage" class="success">
-<h2>Agreement Submitted Successfully</h2>
-<p>
-Thank you for signing the EPIC Models & Talent agreement.<br><br>
-A copy has been emailed to you.
-</p>
-</div>
-
-</div>
-
-<!-- BLOCK 8: SCRIPT -->
-<script>
-
-/* ===== CONTRACT ID ===== */
-function generateContractID(){
-  const now = new Date();
-  const y = now.getFullYear();
-  const m = String(now.getMonth()+1).padStart(2,"0");
-  const d = String(now.getDate()).padStart(2,"0");
-  const t = now.getTime().toString().slice(-4);
-  return `EPIC-${y}${m}${d}-${t}`;
-}
-const contractID = generateContractID();
-document.getElementById("contractID").innerText = contractID;
-
-/* ===== SIGNATURE PAD ===== */
-const canvas = document.getElementById("signature-pad");
-const ctx = canvas.getContext("2d");
-let drawing = false;
-
-function resizeCanvas(){
-  canvas.width = canvas.offsetWidth;
-  canvas.height = canvas.offsetHeight;
-}
-window.addEventListener("resize", resizeCanvas);
-resizeCanvas();
-
-function getCoords(e){
-  const rect = canvas.getBoundingClientRect();
-  return {
-    x: (e.touches ? e.touches[0].clientX : e.clientX) - rect.left,
-    y: (e.touches ? e.touches[0].clientY : e.clientY) - rect.top
-  };
-}
-
-function start(e){
-  drawing = true;
-  ctx.beginPath();
-  const c = getCoords(e);
-  ctx.moveTo(c.x, c.y);
-}
-
-function stop(){
-  drawing = false;
-  ctx.beginPath();
-}
-
-function draw(e){
-  if(!drawing) return;
-  e.preventDefault();
-  const c = getCoords(e);
-  ctx.lineWidth = 2;
-  ctx.lineCap = "round";
-  ctx.strokeStyle = "#000";
-  ctx.lineTo(c.x, c.y);
-  ctx.stroke();
-}
-
-canvas.addEventListener("mousedown", start);
-canvas.addEventListener("mouseup", stop);
-canvas.addEventListener("mouseout", stop);
-canvas.addEventListener("mousemove", draw);
-
-canvas.addEventListener("touchstart", e => { e.preventDefault(); start(e); }, { passive:false });
-canvas.addEventListener("touchend", stop);
-canvas.addEventListener("touchmove", e => { e.preventDefault(); draw(e); }, { passive:false });
-
-function clearSignature(){
-  ctx.clearRect(0,0,canvas.width,canvas.height);
-}
-
-/* ===== SUBMIT ===== */
-async function submitAgreement(){
-
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const phone = document.getElementById("phone").value.trim();
-
-  if(!name || !email){
-    alert("Please enter your name and email.");
-    return;
-  }
-
-  if(canvas.toDataURL().length < 3000){
-    alert("Please provide a signature.");
-    return;
-  }
-
-  const signature = canvas.toDataURL();
-
-  let ip = "";
-  try{
-    const res = await fetch("https://api.ipify.org?format=json");
-    const data = await res.json();
-    ip = data.ip;
-  } catch {
-    ip = "Unknown";
-  }
-
-  const payload = {
-    contractID,
-    name,
-    email,
-    phone,
-    signature,
-    ip,
-    userAgent: navigator.userAgent
-  };
-
-  try{
-    const res = await fetch("https://script.google.com/macros/s/AKfycbx-gWdzMO1oN6bNRJ2huOZgYgtfE23_GrclWxQlsJ1Dycn7GsWY20DWMv5b41k0wsP3kg/exec", {
-      method: "POST",
-      body: JSON.stringify(payload)
-    });
-
-    const result = await res.json();
-
-    if(result.status === "success"){
-      document.getElementById("formSection").style.display = "none";
-      document.getElementById("successMessage").classList.add("show");
-    } else {
-      alert(result.message);
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- BLOCK 1 START: PAGE TITLE -->
+  <title>EPIC Models & Talent Agreement</title>
+  <!-- BLOCK 1 END: PAGE TITLE -->
+
+  <!-- BLOCK 2 START: STYLES -->
+  <style>
+    /* BLOCK 2.1 START: RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    /* BLOCK 2.1 END: RESET */
+
+    /* BLOCK 2.2 START: ROOT */
+    :root {
+      --bg-main: #050505;
+      --bg-card: rgba(255, 255, 255, 0.05);
+      --bg-card-strong: rgba(255, 255, 255, 0.07);
+      --bg-input: rgba(255, 255, 255, 0.06);
+      --text-main: #f2f2f2;
+      --text-soft: #b8b8b8;
+      --gold: #d4af37;
+      --gold-light: #f0c94a;
+      --border-soft: rgba(255, 255, 255, 0.10);
+      --border-gold: rgba(212, 175, 55, 0.35);
+      --shadow-deep: 0 20px 80px rgba(0, 0, 0, 0.65);
+      --shadow-gold: 0 0 30px rgba(212, 175, 55, 0.16);
+      --radius-lg: 22px;
+      --radius-md: 14px;
+      --radius-sm: 10px;
+      --max-wrap: 1440px;
+    }
+    /* BLOCK 2.2 END: ROOT */
+
+    /* BLOCK 2.3 START: BODY */
+    body {
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at top center, rgba(212, 175, 55, 0.08), transparent 30%),
+        radial-gradient(circle at bottom left, rgba(255, 255, 255, 0.03), transparent 25%),
+        linear-gradient(180deg, #090909 0%, #030303 100%);
+      color: var(--text-main);
+      font-family: Arial, sans-serif;
+      font-size: clamp(14px, 0.95vw, 16px);
+      line-height: 1.6;
+      padding: clamp(14px, 2.2vw, 34px);
+      overflow-x: hidden;
+    }
+    /* BLOCK 2.3 END: BODY */
+
+    /* BLOCK 2.4 START: OUTER WRAP */
+    .page-shell {
+      width: 100%;
+      max-width: var(--max-wrap);
+      margin: 0 auto;
+    }
+    /* BLOCK 2.4 END: OUTER WRAP */
+
+    /* BLOCK 2.5 START: MAIN CARD */
+    .wrapper {
+      width: 100%;
+      margin: 0 auto;
+      padding: clamp(22px, 3vw, 44px);
+      border-radius: var(--radius-lg);
+      background: var(--bg-card);
+      border: 1px solid var(--border-soft);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      box-shadow: var(--shadow-deep), var(--shadow-gold), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+      position: relative;
+      overflow: hidden;
     }
 
-  } catch {
-    alert("Submission error. Please try again.");
-  }
-}
+    .wrapper::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.06) 0%,
+        rgba(255, 255, 255, 0.02) 22%,
+        rgba(212, 175, 55, 0.03) 55%,
+        rgba(255, 255, 255, 0.01) 100%
+      );
+      pointer-events: none;
+    }
+    /* BLOCK 2.5 END: MAIN CARD */
 
-</script>
+    /* BLOCK 2.6 START: HEADER AREA */
+    .header-shell {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: clamp(28px, 4vw, 42px);
+      position: relative;
+      z-index: 1;
+    }
 
+    .logo-wrap {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: clamp(14px, 2vw, 20px);
+    }
+
+    .logo {
+      display: block;
+      width: clamp(170px, 18vw, 260px);
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+      margin: 0 auto;
+      filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.35));
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--gold);
+      font-size: clamp(24px, 2.4vw, 38px);
+      line-height: 1.18;
+      letter-spacing: 0.01em;
+      margin-bottom: clamp(10px, 1.5vw, 14px);
+      text-wrap: balance;
+    }
+
+    .contract-id {
+      text-align: center;
+      color: var(--text-soft);
+      font-size: clamp(12px, 0.95vw, 14px);
+      letter-spacing: 0.04em;
+    }
+    /* BLOCK 2.6 END: HEADER AREA */
+
+    /* BLOCK 2.7 START: AGREEMENT GRID */
+    .grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: clamp(24px, 3vw, 44px);
+      margin-bottom: clamp(28px, 4vw, 42px);
+    }
+
+    .content-card {
+      background: var(--bg-card-strong);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: var(--radius-md);
+      padding: clamp(18px, 2.2vw, 28px);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    }
+
+    h2,
+    h3 {
+      color: var(--gold);
+      font-size: clamp(16px, 1.15vw, 20px);
+      line-height: 1.3;
+      margin-bottom: 8px;
+    }
+
+    p,
+    ul {
+      margin-bottom: clamp(16px, 1.8vw, 22px);
+      color: var(--text-main);
+    }
+
+    ul {
+      padding-left: 18px;
+    }
+
+    li + li {
+      margin-top: 8px;
+    }
+
+    strong {
+      color: #ffffff;
+      font-weight: 700;
+    }
+    /* BLOCK 2.7 END: AGREEMENT GRID */
+
+    /* BLOCK 2.8 START: FORM SECTION */
+    .form-section {
+      position: relative;
+      z-index: 1;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding-top: clamp(24px, 3vw, 36px);
+    }
+
+    .form-shell {
+      background: var(--bg-card-strong);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: var(--radius-md);
+      padding: clamp(18px, 2.2vw, 28px);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    }
+
+    .form-title {
+      margin-bottom: clamp(14px, 2vw, 18px);
+    }
+
+    .field-group {
+      margin-bottom: 2px;
+    }
+
+    input {
+      width: 100%;
+      display: block;
+      padding: clamp(12px, 1.2vw, 14px) clamp(12px, 1.3vw, 16px);
+      margin-bottom: clamp(12px, 1.4vw, 15px);
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      background: var(--bg-input);
+      color: #ffffff;
+      font-size: clamp(14px, 0.95vw, 16px);
+      outline: none;
+      transition: border-color 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
+    }
+
+    input::placeholder {
+      color: rgba(255, 255, 255, 0.58);
+    }
+
+    input:focus {
+      border-color: rgba(212, 175, 55, 0.55);
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.14);
+      background: rgba(255, 255, 255, 0.08);
+    }
+    /* BLOCK 2.8 END: FORM SECTION */
+
+    /* BLOCK 2.9 START: SIGNATURE */
+    .signature-title {
+      margin-top: 6px;
+      margin-bottom: 10px;
+    }
+
+    .canvas-wrap {
+      width: 100%;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: #ffffff;
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.08);
+    }
+
+    canvas {
+      display: block;
+      width: 100%;
+      height: clamp(160px, 22vw, 210px);
+      background: #ffffff;
+      cursor: crosshair;
+      touch-action: none;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 14px;
+    }
+    /* BLOCK 2.9 END: SIGNATURE */
+
+    /* BLOCK 2.10 START: BUTTONS */
+    button {
+      appearance: none;
+      border: none;
+      border-radius: 999px;
+      padding: clamp(11px, 1.1vw, 13px) clamp(18px, 1.8vw, 24px);
+      font-size: clamp(14px, 0.95vw, 16px);
+      font-weight: 700;
+      line-height: 1;
+      cursor: pointer;
+      transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease,
+        filter 0.18s ease,
+        opacity 0.18s ease;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.03);
+    }
+
+    button:active {
+      transform: translateY(0);
+    }
+
+    .btn-clear {
+      background: rgba(255, 255, 255, 0.09);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.10);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+    }
+
+    .btn-submit {
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+      color: #111111;
+      box-shadow: 0 8px 24px rgba(212, 175, 55, 0.28);
+    }
+    /* BLOCK 2.10 END: BUTTONS */
+
+    /* BLOCK 2.11 START: SUCCESS MESSAGE */
+    .success {
+      display: none;
+      opacity: 0;
+      margin-top: clamp(24px, 3vw, 34px);
+      padding: clamp(20px, 2.3vw, 28px);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-gold);
+      border-radius: var(--radius-md);
+      text-align: center;
+      transition: opacity 0.45s ease;
+      position: relative;
+      z-index: 1;
+    }
+
+    .success.show {
+      display: block;
+      opacity: 1;
+    }
+
+    .success h2 {
+      margin-bottom: 10px;
+    }
+
+    .success p {
+      margin-bottom: 0;
+      color: #efefef;
+    }
+    /* BLOCK 2.11 END: SUCCESS MESSAGE */
+
+    /* BLOCK 2.12 START: RESPONSIVE */
+    @media (max-width: 980px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 12px;
+      }
+
+      .wrapper {
+        border-radius: 18px;
+      }
+
+      .button-row {
+        flex-direction: column;
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+
+    @media (min-width: 1800px) {
+      .page-shell {
+        max-width: 1520px;
+      }
+    }
+    /* BLOCK 2.12 END: RESPONSIVE */
+  </style>
+  <!-- BLOCK 2 END: STYLES -->
+</head>
+<body>
+  <div class="page-shell">
+    <div class="wrapper">
+
+      <!-- BLOCK 3 START: HEADER -->
+      <div class="header-shell">
+        <div class="logo-wrap">
+          <img
+            src="https://assets.cdn.filesafe.space/YzjwmP6zpvDUp28hrM1o/media/687edb257f24c671f43bb1cb.png"
+            class="logo"
+            alt="EPIC Models & Talent logo"
+          />
+        </div>
+
+        <h1>EPIC Models &amp; Talent<br />Model Release Agreement</h1>
+
+        <div class="contract-id">
+          Contract ID: <span id="contractID"></span>
+        </div>
+      </div>
+      <!-- BLOCK 3 END: HEADER -->
+
+      <!-- BLOCK 4 START: AGREEMENT CONTENT -->
+      <div class="grid">
+
+        <div class="content-card">
+          <h3>1. Scope of Work</h3>
+          <p>
+            Model agrees to participate in a photo and video shoot on
+            <strong>April 7, 2026</strong>, from <strong>9:30 AM – 11:30 AM</strong>,
+            at <strong>M Resort Spa Casino</strong>, 12300 Las Vegas Blvd S,
+            Henderson, Nevada.
+          </p>
+
+          <p>
+            Model must arrive by <strong>9:15 AM</strong> and meet in the
+            <strong>main parking lot at M Resort</strong>. Model agrees to arrive
+            at least <strong>15 minutes early</strong> and be fully ready to shoot
+            upon arrival.
+          </p>
+
+          <p>
+            Content will include posed and candid lifestyle photography and video
+            captured in the M Resort pool area. Model is responsible for arriving
+            camera-ready with required wardrobe, footwear, hair, and makeup.
+          </p>
+
+          <h3>2. On-Set Requirements</h3>
+          <p>
+            <strong>No photos or videos are permitted on set at any time.</strong>
+            Model must follow all direction from EPIC Models &amp; Talent and
+            production staff and maintain professional conduct throughout the shoot.
+          </p>
+
+          <h3>3. Rights &amp; Usage</h3>
+          <p>
+            Model grants EPIC Models &amp; Talent, its partners, clients, and assigns
+            unrestricted, irrevocable, worldwide rights to use, reproduce, edit,
+            publish, distribute, and display all content created during the shoot for
+            legal, commercial, promotional, advertising, editorial, and marketing
+            purposes across any media now known or later developed.
+          </p>
+        </div>
+
+        <div class="content-card">
+          <h3>4. Limitations on Use</h3>
+          <p>
+            EPIC agrees that content will not be altered to appear pornographic,
+            defamatory, or illegal. Model’s name and personal information will not be
+            used in connection with the content without consent.
+          </p>
+
+          <h3>5. Compensation</h3>
+          <p>
+            Model will be compensated directly by EPIC Models &amp; Talent upon
+            completion of the shoot. Payment method will be agreed upon between Model
+            and EPIC Models &amp; Talent.
+          </p>
+
+          <h3>6. Ownership</h3>
+          <p>
+            All content created during the shoot is the exclusive property of
+            EPIC Models &amp; Talent and/or its client. Model retains no ownership
+            or intellectual property rights in the content and may not use or
+            distribute it without written approval.
+          </p>
+
+          <h3>7. Social Media Restrictions</h3>
+          <p>
+            Model agrees not to post, share, livestream, or distribute any photos,
+            videos, or behind-the-scenes content from the shoot while on set or prior
+            to official release. No personal photo or video capture is allowed unless
+            approved by EPIC Models &amp; Talent. Any approved post requires written
+            approval, must tag <strong>@epicmodelsandtalent</strong> and any designated
+            partners, may not be used for paid promotions or third-party use without
+            written consent, and must be removed within <strong>24 hours</strong> if
+            requested by EPIC Models &amp; Talent.
+          </p>
+        </div>
+
+      </div>
+      <!-- BLOCK 4 END: AGREEMENT CONTENT -->
+
+      <!-- BLOCK 5 START: FORM SECTION -->
+      <div class="form-section" id="formSection">
+        <div class="form-shell">
+          <h2 class="form-title">Model Information</h2>
+
+          <div class="field-group">
+            <input id="name" type="text" placeholder="Full Name" />
+            <input id="email" type="email" placeholder="Email Address" />
+            <input id="phone" type="tel" placeholder="Phone Number (Optional)" />
+          </div>
+
+          <h3 class="signature-title">Signature</h3>
+
+          <div class="canvas-wrap">
+            <canvas id="signature-pad"></canvas>
+          </div>
+
+          <div class="button-row">
+            <button type="button" class="btn-clear" onclick="clearSignature()">Clear Signature</button>
+            <button type="button" class="btn-submit" onclick="submitAgreement()">Submit Agreement</button>
+          </div>
+        </div>
+      </div>
+      <!-- BLOCK 5 END: FORM SECTION -->
+
+      <!-- BLOCK 6 START: SUCCESS MESSAGE -->
+      <div id="successMessage" class="success">
+        <h2>Agreement Submitted Successfully</h2>
+        <p>
+          Thank you for signing the EPIC Models &amp; Talent agreement.<br />
+          A copy of your signed agreement has been emailed to you.
+        </p>
+      </div>
+      <!-- BLOCK 6 END: SUCCESS MESSAGE -->
+
+    </div>
+  </div>
+
+  <!-- BLOCK 7 START: SCRIPT -->
+  <script>
+    /* BLOCK 7.1 START: CONTRACT ID */
+    function generateContractID() {
+      const now = new Date();
+      const y = now.getFullYear();
+      const m = String(now.getMonth() + 1).padStart(2, "0");
+      const d = String(now.getDate()).padStart(2, "0");
+      const t = now.getTime().toString().slice(-4);
+      return `EPIC-${y}${m}${d}-${t}`;
+    }
+
+    const contractID = generateContractID();
+    document.getElementById("contractID").innerText = contractID;
+    /* BLOCK 7.1 END: CONTRACT ID */
+
+    /* BLOCK 7.2 START: SIGNATURE PAD SETUP */
+    const canvas = document.getElementById("signature-pad");
+    const ctx = canvas.getContext("2d");
+    let drawing = false;
+
+    function resizeCanvas() {
+      const ratio = Math.max(window.devicePixelRatio || 1, 1);
+      const cssWidth = canvas.offsetWidth;
+      const cssHeight = canvas.offsetHeight;
+
+      canvas.width = Math.floor(cssWidth * ratio);
+      canvas.height = Math.floor(cssHeight * ratio);
+
+      ctx.setTransform(1, 0, 0, 1, 0, 0);
+      ctx.scale(ratio, ratio);
+
+      ctx.lineWidth = 2;
+      ctx.lineCap = "round";
+      ctx.lineJoin = "round";
+      ctx.strokeStyle = "#000000";
+    }
+
+    window.addEventListener("resize", resizeCanvas);
+    resizeCanvas();
+    /* BLOCK 7.2 END: SIGNATURE PAD SETUP */
+
+    /* BLOCK 7.3 START: SIGNATURE HELPERS */
+    function getCoordinates(e) {
+      const rect = canvas.getBoundingClientRect();
+      const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+      const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+
+      return {
+        x: clientX - rect.left,
+        y: clientY - rect.top
+      };
+    }
+
+    function startDrawing(e) {
+      drawing = true;
+      const coords = getCoordinates(e);
+      ctx.beginPath();
+      ctx.moveTo(coords.x, coords.y);
+    }
+
+    function stopDrawing() {
+      drawing = false;
+      ctx.beginPath();
+    }
+
+    function draw(e) {
+      if (!drawing) return;
+      e.preventDefault();
+
+      const coords = getCoordinates(e);
+      ctx.lineTo(coords.x, coords.y);
+      ctx.stroke();
+    }
+
+    function clearSignature() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.beginPath();
+    }
+    /* BLOCK 7.3 END: SIGNATURE HELPERS */
+
+    /* BLOCK 7.4 START: SIGNATURE EVENTS */
+    canvas.addEventListener("mousedown", startDrawing);
+    canvas.addEventListener("mouseup", stopDrawing);
+    canvas.addEventListener("mouseout", stopDrawing);
+    canvas.addEventListener("mousemove", draw);
+
+    canvas.addEventListener(
+      "touchstart",
+      function (e) {
+        e.preventDefault();
+        startDrawing(e);
+      },
+      { passive: false }
+    );
+
+    canvas.addEventListener("touchend", stopDrawing);
+
+    canvas.addEventListener(
+      "touchmove",
+      function (e) {
+        e.preventDefault();
+        draw(e);
+      },
+      { passive: false }
+    );
+    /* BLOCK 7.4 END: SIGNATURE EVENTS */
+
+    /* BLOCK 7.5 START: FORM SUBMISSION */
+    async function submitAgreement() {
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+
+      if (!name || !email) {
+        alert("Please enter your full name and email address.");
+        return;
+      }
+
+      if (canvas.toDataURL().length < 3000) {
+        alert("Please provide your signature.");
+        return;
+      }
+
+      const signature = canvas.toDataURL();
+      let ip = "Unknown";
+
+      try {
+        const ipResponse = await fetch("https://api.ipify.org?format=json");
+        const ipData = await ipResponse.json();
+        ip = ipData.ip || "Unknown";
+      } catch (error) {
+        ip = "Unknown";
+      }
+
+      const payload = {
+        contractID: contractID,
+        name: name,
+        email: email,
+        phone: phone,
+        signature: signature,
+        ip: ip,
+        userAgent: navigator.userAgent
+      };
+
+      try {
+        const response = await fetch("https://script.google.com/macros/s/AKfycbx-gWdzMO1oN6bNRJ2huOZgYgtfE23_GrclWxQlsJ1Dycn7GsWY20DWMv5b41k0wsP3kg/exec", {
+          method: "POST",
+          body: JSON.stringify(payload)
+        });
+
+        const result = await response.json();
+
+        if (result.status === "success") {
+          const formSection = document.getElementById("formSection");
+          const successMessage = document.getElementById("successMessage");
+
+          formSection.style.opacity = "0";
+          formSection.style.transition = "opacity 0.35s ease";
+
+          setTimeout(function () {
+            formSection.style.display = "none";
+            successMessage.classList.add("show");
+          }, 350);
+        } else {
+          alert("Submission error: " + (result.message || "Unknown error."));
+        }
+      } catch (error) {
+        alert("An error occurred during submission. Please try again.");
+      }
+    }
+    /* BLOCK 7.5 END: FORM SUBMISSION */
+  </script>
+  <!-- BLOCK 7 END: SCRIPT -->
 </body>
 </html>
