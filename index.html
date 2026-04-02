@@ -5,212 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
   <title>EPIC Models & Talent · Model Release Agreement</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      background: #050505;
-      font-family: 'Arial', sans-serif;
-      color: #eee;
-      line-height: 1.5;
-      font-size: 16px;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
-
-    .wrapper {
-      max-width: 1100px;
-      width: 100%;
-      margin: 0 auto;
-      background: #0c0c0c;
-      padding: 40px;
-      border-radius: 28px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.8), 0 0 0 1px #2a2a2a inset;
-    }
-
-    h1, h2, h3 {
-      color: #d4af37;
-      font-weight: 600;
-      line-height: 1.2;
-      margin: 0 0 0.5rem 0;
-    }
-
-    h1 {
-      font-size: 2.2rem;
-      text-align: center;
-    }
-
-    h2 {
-      font-size: 1.8rem;
-    }
-
-    h3 {
-      font-size: 1.3rem;
-      margin: 1.8rem 0 0.8rem 0;
-    }
-
-    .grid div:first-child h3:first-child,
-    .grid div:last-child h3:first-child {
-      margin-top: 0;
-    }
-
-    p, ul {
-      margin-bottom: 1.5rem;
-      color: #ddd;
-    }
-
-    ul {
-      padding-left: 1.4rem;
-    }
-
-    .logo-container {
-      text-align: center;
-      margin-bottom: 25px;
-    }
-
-    .logo {
-      display: inline-block;
-      max-width: 70%;
-      width: 220px;
-      border-radius: 30px;
-      background: rgba(255,255,255,0.02);
-      padding: 6px 0;
-    }
-
-    .contract-id {
-      text-align: center;
-      color: #aaa;
-      font-size: 0.95rem;
-      margin-bottom: 60px;
-      border-bottom: 1px dashed #333;
-      padding-bottom: 18px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px 50px;
-      margin-bottom: 20px;
-    }
-
-    .form-section {
-      margin-top: 30px;
-      border-top: 1px solid #333;
-      padding-top: 40px;
-    }
-
-    input {
-      width: 100%;
-      padding: 15px 16px;
-      margin-bottom: 18px;
-      background: #1e1e1e;
-      border: 1px solid #3a3a3a;
-      border-radius: 16px;
-      color: #fff;
-      font-size: 1rem;
-    }
-
-    input:focus {
-      border-color: #d4af37;
-      outline: none;
-      background: #262626;
-    }
-
-    canvas {
-      background: #fcfcfc;
-      border-radius: 20px;
-      width: 100%;
-      height: 180px;
-      cursor: crosshair;
-      touch-action: none;
-      border: 2px solid #2d2d2d;
-    }
-
-    button {
-      background: #d4af37;
-      border: none;
-      padding: 14px 24px;
-      font-weight: 700;
-      font-size: 1rem;
-      border-radius: 50px;
-      cursor: pointer;
-      margin-top: 18px;
-      margin-right: 15px;
-      color: #0c0c0c;
-      transition: 0.2s;
-      box-shadow: 0 6px 0 #9e8028;
-    }
-
-    button:hover {
-      background: #e8c253;
-      transform: translateY(-2px);
-    }
-
-    .success {
-      display: none;
-      opacity: 0;
-      margin-top: 50px;
-      padding: 40px 30px;
-      background: #121212;
-      border: 1px solid #d4af37;
-      border-radius: 40px;
-      text-align: center;
-    }
-
-    .success.show {
-      display: block;
-      opacity: 1;
-    }
-
-    @media screen and (max-width: 800px) {
-      body {
-        padding: 0;
-        align-items: flex-start;
-      }
-      .wrapper {
-        border-radius: 0;
-        padding: 24px 20px;
-        min-height: 100vh;
-      }
-      .grid {
-        grid-template-columns: 1fr;
-        gap: 10px;
-      }
-      button {
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: 12px;
-      }
-    }
-
-    @media print {
-      body { background: white; }
-      .wrapper { background: white; color: black; box-shadow: none; }
-      h1, h2, h3 { color: black; }
-      button { display: none; }
-      canvas { border: 1px solid #333; }
-    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { background:#050505; font-family:Arial,sans-serif; color:#eee; line-height:1.5; font-size:16px; min-height:100vh; display:flex; align-items:center; justify-content:center; padding:20px; }
+    .wrapper { max-width:1100px; width:100%; background:#0c0c0c; padding:40px; border-radius:28px; box-shadow:0 20px 40px rgba(0,0,0,0.8),0 0 0 1px #2a2a2a inset; }
+    h1,h2,h3 { color:#d4af37; font-weight:600; }
+    h1 { font-size:2.2rem; text-align:center; margin-bottom:0.5rem; }
+    h2 { font-size:1.8rem; margin-bottom:1.5rem; }
+    h3 { font-size:1.3rem; margin:1.8rem 0 0.8rem 0; }
+    p,ul { margin-bottom:1.5rem; color:#ddd; }
+    ul { padding-left:1.4rem; }
+    .logo-container { text-align:center; margin-bottom:25px; }
+    .logo { display:inline-block; max-width:70%; width:220px; border-radius:30px; background:rgba(255,255,255,0.02); padding:6px 0; }
+    .contract-id { text-align:center; color:#aaa; margin-bottom:60px; border-bottom:1px dashed #333; padding-bottom:18px; }
+    .grid { display:grid; grid-template-columns:1fr 1fr; gap:40px 50px; margin-bottom:20px; }
+    .form-section { margin-top:30px; border-top:1px solid #333; padding-top:40px; }
+    input { width:100%; padding:15px 16px; margin-bottom:18px; background:#1e1e1e; border:1px solid #3a3a3a; border-radius:16px; color:#fff; font-size:1rem; }
+    input:focus { border-color:#d4af37; outline:none; background:#262626; }
+    canvas { background:#fcfcfc; border-radius:20px; width:100%; height:180px; cursor:crosshair; touch-action:none; border:2px solid #2d2d2d; }
+    button { background:#d4af37; border:none; padding:14px 24px; font-weight:700; font-size:1rem; border-radius:50px; cursor:pointer; margin-top:18px; margin-right:15px; color:#0c0c0c; transition:0.2s; box-shadow:0 6px 0 #9e8028; }
+    button:hover { background:#e8c253; transform:translateY(-2px); }
+    .success { display:none; opacity:0; margin-top:50px; padding:40px 30px; background:#121212; border:1px solid #d4af37; border-radius:40px; text-align:center; }
+    .success.show { display:block; opacity:1; }
+    @media screen and (max-width:800px) { body { padding:0; align-items:flex-start; } .wrapper { border-radius:0; padding:24px 20px; min-height:100vh; } .grid { grid-template-columns:1fr; gap:10px; } button { width:100%; margin-right:0; margin-bottom:12px; } }
+    @media print { body { background:white; } .wrapper { background:white; color:black; } button { display:none; } }
   </style>
 </head>
 <body>
 
 <div class="wrapper">
   <div class="logo-container">
-    <!-- YOUR PROVIDED LOGO URL -->
     <img src="https://assets.cdn.filesafe.space/YzjwmP6zpvDUp28hrM1o/media/687edb257f24c671f43bb1cb.png" class="logo" alt="EPIC Models & Talent logo">
   </div>
-
   <h1>EPIC Models & Talent<br>Model Release Agreement</h1>
-
-  <div class="contract-id">
-    Contract ID: <span id="contractID"></span>
-  </div>
+  <div class="contract-id">Contract ID: <span id="contractID"></span></div>
 
   <div class="grid">
     <div>
@@ -218,33 +45,20 @@
       <p>Model agrees to participate in a photo and video shoot on April 7, 2026, from 9:30 AM – 11:30 AM at M Resort Spa Casino, Henderson, Nevada.</p>
       <p>Model must arrive by <strong>9:15 AM</strong> and meet in the main parking lot. Model agrees to arrive at least 15 minutes early and be fully ready to shoot.</p>
       <p>Content will include posed and candid lifestyle footage within the pool area. Model is responsible for wardrobe, hair, and makeup.</p>
-
       <h3>2. On-Set Conduct</h3>
       <p><strong>No photos or videos are permitted on set at any time.</strong> Model agrees to follow all direction and maintain professional conduct.</p>
-
       <h3>3. Rights & Usage</h3>
       <p>Model grants EPIC Models & Talent unrestricted, worldwide rights to use all photo and video content for marketing, advertising, and commercial use.</p>
     </div>
-
     <div>
       <h3>4. Limitations</h3>
       <p>Content will not be altered in a defamatory, illegal, or pornographic way. Model name and personal information will not be used without consent.</p>
-
       <h3>5. Compensation</h3>
       <p>Model will be paid upon completion of the shoot. Payment method will be agreed upon.</p>
-
       <h3>6. Ownership</h3>
       <p>All content is the exclusive property of EPIC Models & Talent and/or its clients. Model retains no ownership rights.</p>
-
       <h3>7. Social Media Restrictions</h3>
-      <ul>
-        <li>No posting or sharing content while on set or before official release.</li>
-        <li>No personal content capture unless approved.</li>
-        <li>Posting requires written approval.</li>
-        <li>Must tag @epicmodelsandtalent.</li>
-        <li>No paid promotions or third-party use.</li>
-        <li>Content must be removed within 24 hours if requested.</li>
-      </ul>
+      <ul><li>No posting or sharing content while on set or before official release.</li><li>No personal content capture unless approved.</li><li>Posting requires written approval.</li><li>Must tag @epicmodelsandtalent.</li><li>No paid promotions or third-party use.</li><li>Content must be removed within 24 hours if requested.</li></ul>
     </div>
   </div>
 
@@ -253,13 +67,15 @@
     <input type="text" id="name" placeholder="Full Name *">
     <input type="email" id="email" placeholder="Email Address *">
     <input type="text" id="phone" placeholder="Phone (Optional)">
-
     <h3>Signature</h3>
     <canvas id="signature-pad"></canvas>
-
-    <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px;">
+    <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:10px;">
       <button onclick="clearSignature()">✕ Clear Signature</button>
       <button onclick="submitAgreement()">✓ Submit Agreement</button>
+    </div>
+    <!-- Test button for debugging -->
+    <div style="margin-top:20px; text-align:center;">
+      <button onclick="testConnection()" style="background:#333; box-shadow:none;">🔍 Test Connection to Server</button>
     </div>
   </div>
 
@@ -271,19 +87,19 @@
 
 <script>
   (function() {
-    // Generate Contract ID
+    // --- CONTRACT ID ---
     function generateContractID() {
       const now = new Date();
       const y = now.getFullYear();
-      const m = String(now.getMonth() + 1).padStart(2, '0');
-      const d = String(now.getDate()).padStart(2, '0');
+      const m = String(now.getMonth()+1).padStart(2,'0');
+      const d = String(now.getDate()).padStart(2,'0');
       const t = now.getTime().toString().slice(-4);
       return `EPIC-${y}${m}${d}-${t}`;
     }
     const contractID = generateContractID();
     document.getElementById('contractID').innerText = contractID;
 
-    // Signature Pad
+    // --- SIGNATURE PAD ---
     const canvas = document.getElementById('signature-pad');
     const ctx = canvas.getContext('2d');
     let drawing = false;
@@ -296,104 +112,55 @@
       ctx.lineCap = 'round';
       ctx.strokeStyle = '#000';
       ctx.fillStyle = '#fff';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillRect(0,0,canvas.width,canvas.height);
     }
-
     window.addEventListener('resize', resizeCanvas);
     resizeCanvas();
 
     function getCoords(e) {
       const rect = canvas.getBoundingClientRect();
-      let clientX, clientY;
-      if (e.touches) {
-        clientX = e.touches[0].clientX;
-        clientY = e.touches[0].clientY;
-      } else {
-        clientX = e.clientX;
-        clientY = e.clientY;
-      }
-      return { x: clientX - rect.left, y: clientY - rect.top };
+      let cx, cy;
+      if(e.touches) { cx = e.touches[0].clientX; cy = e.touches[0].clientY; }
+      else { cx = e.clientX; cy = e.clientY; }
+      return { x: cx - rect.left, y: cy - rect.top };
     }
+    function start(e) { e.preventDefault(); drawing=true; ctx.beginPath(); const {x,y}=getCoords(e); ctx.moveTo(x,y); }
+    function stop() { drawing=false; ctx.beginPath(); }
+    function draw(e) { if(!drawing) return; e.preventDefault(); const {x,y}=getCoords(e); ctx.lineTo(x,y); ctx.stroke(); ctx.beginPath(); ctx.moveTo(x,y); }
+    canvas.addEventListener('mousedown',start); canvas.addEventListener('mouseup',stop); canvas.addEventListener('mouseout',stop); canvas.addEventListener('mousemove',draw);
+    canvas.addEventListener('touchstart',start,{passive:false}); canvas.addEventListener('touchend',stop); canvas.addEventListener('touchcancel',stop); canvas.addEventListener('touchmove',draw,{passive:false});
+    window.clearSignature = function() { ctx.clearRect(0,0,canvas.width,canvas.height); ctx.fillStyle='#fff'; ctx.fillRect(0,0,canvas.width,canvas.height); ctx.beginPath(); };
 
-    function start(e) {
-      e.preventDefault();
-      drawing = true;
-      ctx.beginPath();
-      const { x, y } = getCoords(e);
-      ctx.moveTo(x, y);
-    }
-
-    function stop() {
-      drawing = false;
-      ctx.beginPath();
-    }
-
-    function draw(e) {
-      if (!drawing) return;
-      e.preventDefault();
-      const { x, y } = getCoords(e);
-      ctx.lineTo(x, y);
-      ctx.stroke();
-      ctx.beginPath();
-      ctx.moveTo(x, y);
-    }
-
-    canvas.addEventListener('mousedown', start);
-    canvas.addEventListener('mouseup', stop);
-    canvas.addEventListener('mouseout', stop);
-    canvas.addEventListener('mousemove', draw);
-    canvas.addEventListener('touchstart', start, { passive: false });
-    canvas.addEventListener('touchend', stop);
-    canvas.addEventListener('touchcancel', stop);
-    canvas.addEventListener('touchmove', draw, { passive: false });
-
-    window.clearSignature = function() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = '#fff';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-      ctx.beginPath();
-    };
-
-    // Submit to Google Apps Script
-    // ⚠️ REPLACE THIS URL WITH YOUR DEPLOYED WEB APP URL ⚠️
+    // --- IMPORTANT: REPLACE WITH YOUR DEPLOYED WEB APP URL ---
     const WEBAPP_URL = 'https://script.google.com/macros/s/AKfycbxvRsHBLfhnqVJdej_wox_KKa-cP992qHMH5w64s1q8GgdwTRB9DQ9PaSLiIg_OIOwvFA/exec';
 
+    // Test connection (GET request)
+    window.testConnection = async function() {
+      try {
+        const response = await fetch(WEBAPP_URL, { method: 'GET', mode: 'cors' });
+        const text = await response.text();
+        alert(`Server responded with status ${response.status}\n\nFirst 100 chars: ${text.substring(0,100)}`);
+      } catch(err) {
+        alert(`Connection failed: ${err.message}\n\nMake sure the Apps Script is deployed with access: "Anyone" and you are using the correct URL.`);
+      }
+    };
+
+    // Submit agreement
     window.submitAgreement = async function() {
       const name = document.getElementById('name').value.trim();
       const email = document.getElementById('email').value.trim();
       const phone = document.getElementById('phone').value.trim();
-
-      if (!name || !email) {
-        alert('Please enter your name and email address.');
-        return;
-      }
-
-      if (canvas.toDataURL().length < 2500) {
-        alert('Please provide your signature by drawing in the box above.');
-        return;
-      }
+      if(!name || !email) { alert('Please enter name and email.'); return; }
+      if(canvas.toDataURL().length < 2500) { alert('Please provide your signature.'); return; }
 
       const signatureData = canvas.toDataURL();
       let ip = 'unavailable';
-      try {
-        const resp = await fetch('https://api.ipify.org?format=json');
-        const data = await resp.json();
-        ip = data.ip;
-      } catch (e) { console.warn(e); }
+      try { const resp = await fetch('https://api.ipify.org?format=json'); const data = await resp.json(); ip = data.ip; } catch(e) {}
 
-      const payload = {
-        contractID, name, email, phone,
-        signature: signatureData,
-        ip,
-        userAgent: navigator.userAgent,
-        timestamp: new Date().toISOString()
-      };
+      const payload = { contractID, name, email, phone, signature: signatureData, ip, userAgent: navigator.userAgent, timestamp: new Date().toISOString() };
 
       const submitBtn = document.querySelector('button[onclick="submitAgreement()"]');
-      if (submitBtn) {
-        submitBtn.disabled = true;
-        submitBtn.innerText = 'Submitting...';
-      }
+      if(submitBtn) { submitBtn.disabled = true; submitBtn.innerText = 'Submitting...'; }
 
       try {
         const response = await fetch(WEBAPP_URL, {
@@ -402,20 +169,18 @@
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload)
         });
-
         const result = await response.json();
-
-        if (response.ok && result.status === 'success') {
+        if(response.ok && result.status === 'success') {
           document.getElementById('formSection').style.display = 'none';
           document.getElementById('successMessage').classList.add('show');
         } else {
           throw new Error(result.message || 'Server error');
         }
-      } catch (err) {
+      } catch(err) {
+        alert(`Network error — unable to reach server.\n\n${err.message}\n\n1. Click "Test Connection" button.\n2. Verify your Apps Script is deployed with "Anyone" access.\n3. Redeploy as a NEW VERSION and copy the NEW URL into WEBAPP_URL.`);
         console.error(err);
-        alert(`Network error — unable to reach server.\n\n${err.message}\n\nMake sure the Google Apps Script is deployed with "Anyone" access and you are using the latest Web App URL.`);
       } finally {
-        if (submitBtn && document.getElementById('formSection').style.display !== 'none') {
+        if(submitBtn && document.getElementById('formSection').style.display !== 'none') {
           submitBtn.disabled = false;
           submitBtn.innerText = '✓ Submit Agreement';
         }
