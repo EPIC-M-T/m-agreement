@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-  <title>EPIC Models & Talent · Model Release Agreement (Full Responsive)</title>
+  <title>EPIC Models & Talent · Model Release Agreement</title>
   <style>
-    /* ----- RESET & GLOBAL (fully responsive from PB3 template) ----- */
     * {
       margin: 0;
       padding: 0;
@@ -13,7 +12,7 @@
     }
 
     body {
-      background: #050505;        /* deep black background */
+      background: #050505;
       font-family: 'Arial', sans-serif;
       color: #eee;
       line-height: 1.5;
@@ -25,19 +24,16 @@
       padding: 20px;
     }
 
-    /* main card – fully centered, responsive width */
     .wrapper {
       max-width: 1100px;
       width: 100%;
       margin: 0 auto;
-      background: #0c0c0c;        /* dark grey card (solid, no blur) */
+      background: #0c0c0c;
       padding: 40px;
       border-radius: 28px;
       box-shadow: 0 20px 40px rgba(0,0,0,0.8), 0 0 0 1px #2a2a2a inset;
-      transition: all 0.2s ease;
     }
 
-    /* ----- TYPOGRAPHY & GOLD ACCENTS ----- */
     h1, h2, h3 {
       color: #d4af37;
       font-weight: 600;
@@ -47,14 +43,11 @@
 
     h1 {
       font-size: 2.2rem;
-      letter-spacing: -0.02em;
-      margin-bottom: 0.5rem;
       text-align: center;
     }
 
     h2 {
       font-size: 1.8rem;
-      margin-bottom: 1.5rem;
     }
 
     h3 {
@@ -62,7 +55,6 @@
       margin: 1.8rem 0 0.8rem 0;
     }
 
-    /* first H3 in each column should not have huge top margin */
     .grid div:first-child h3:first-child,
     .grid div:last-child h3:first-child {
       margin-top: 0;
@@ -77,15 +69,11 @@
       padding-left: 1.4rem;
     }
 
-    li {
-      margin-bottom: 0.4rem;
-    }
-
-    /* LOGO CENTERING - FIXED (desktop + mobile) */
     .logo-container {
       text-align: center;
       margin-bottom: 25px;
     }
+
     .logo {
       display: inline-block;
       max-width: 70%;
@@ -99,13 +87,11 @@
       text-align: center;
       color: #aaa;
       font-size: 0.95rem;
-      letter-spacing: 0.02em;
       margin-bottom: 60px;
       border-bottom: 1px dashed #333;
       padding-bottom: 18px;
     }
 
-    /* ----- 2-COLUMN GRID (EPIC CONTENT) ----- */
     .grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -113,7 +99,6 @@
       margin-bottom: 20px;
     }
 
-    /* ----- FORM SECTION (signature area) ----- */
     .form-section {
       margin-top: 30px;
       border-top: 1px solid #333;
@@ -129,8 +114,6 @@
       border-radius: 16px;
       color: #fff;
       font-size: 1rem;
-      transition: 0.15s;
-      -webkit-appearance: none;
     }
 
     input:focus {
@@ -145,10 +128,8 @@
       width: 100%;
       height: 180px;
       cursor: crosshair;
-      display: block;
       touch-action: none;
       border: 2px solid #2d2d2d;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.6);
     }
 
     button {
@@ -164,18 +145,11 @@
       color: #0c0c0c;
       transition: 0.2s;
       box-shadow: 0 6px 0 #9e8028;
-      border: 1px solid #f5d97a;
     }
 
     button:hover {
       background: #e8c253;
       transform: translateY(-2px);
-      box-shadow: 0 8px 0 #9e8028;
-    }
-
-    button:active {
-      transform: translateY(4px);
-      box-shadow: 0 2px 0 #9e8028;
     }
 
     .success {
@@ -187,8 +161,6 @@
       border: 1px solid #d4af37;
       border-radius: 40px;
       text-align: center;
-      transition: opacity 0.4s ease;
-      box-shadow: 0 15px 30px rgba(0,0,0,0.8);
     }
 
     .success.show {
@@ -196,164 +168,42 @@
       opacity: 1;
     }
 
-    .success h2 {
-      margin-bottom: 1rem;
-    }
-
-    /* ---------- RESPONSIVE : MOBILE FIRST (100% from second file) ---------- */
     @media screen and (max-width: 800px) {
       body {
         padding: 0;
         align-items: flex-start;
       }
-
       .wrapper {
-        max-width: 100%;
         border-radius: 0;
         padding: 24px 20px;
-        box-shadow: none;
-        border-left: none;
-        border-right: none;
         min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
       }
-
       .grid {
         grid-template-columns: 1fr;
         gap: 10px;
       }
-
-      h3 {
-        margin: 1.5rem 0 0.6rem 0;
-      }
-
-      .grid div:first-child h3:first-child,
-      .grid div:last-child h3:first-child {
-        margin-top: 0;
-      }
-
-      .contract-id {
-        margin-bottom: 40px;
-        font-size: 0.9rem;
-      }
-
-      h1 {
-        font-size: 2rem;
-        line-height: 1.2;
-      }
-
-      .logo {
-        width: 200px;
-      }
-
-      .form-section {
-        padding-top: 35px;
-        margin-top: 15px;
-      }
-
-      canvas {
-        height: 200px;
-      }
-
       button {
         width: 100%;
         margin-right: 0;
         margin-bottom: 12px;
-        text-align: center;
-      }
-
-      button:last-of-type {
-        margin-bottom: 0;
       }
     }
 
-    /* tiny screens ( < 420px ) fine-tuning */
-    @media screen and (max-width: 420px) {
-      .wrapper {
-        padding: 20px 16px;
-      }
-
-      h1 {
-        font-size: 1.8rem;
-      }
-
-      h2 {
-        font-size: 1.5rem;
-      }
-
-      .contract-id {
-        margin-bottom: 30px;
-      }
-
-      input {
-        padding: 14px;
-      }
-
-      canvas {
-        height: 170px;
-      }
-    }
-
-    /* ---------- PRINT STYLES (clean) ---------- */
     @media print {
-      body {
-        background: white;
-        padding: 0.3in;
-        display: block;
-      }
-      .wrapper {
-        background: white;
-        color: black;
-        box-shadow: none;
-        border-radius: 0;
-        padding: 20px;
-        max-width: 100%;
-      }
-      .logo {
-        filter: brightness(0.9);
-        background: #f0f0f0;
-        padding: 8px;
-        border-radius: 18px;
-      }
-      h1, h2, h3 {
-        color: black;
-      }
-      .contract-id {
-        color: #333;
-        border-bottom: 1px solid #aaa;
-        margin-bottom: 50px;
-      }
-      input {
-        background: transparent;
-        border: 1px solid #555;
-        color: black;
-      }
-      canvas {
-        border: 1px solid #333;
-        background: white;
-      }
-      button {
-        display: none;
-      }
-      .form-section {
-        border-top-color: #aaa;
-      }
-      .success {
-        background: white;
-        border: 1px solid #333;
-        color: black;
-      }
+      body { background: white; }
+      .wrapper { background: white; color: black; box-shadow: none; }
+      h1, h2, h3 { color: black; }
+      button { display: none; }
+      canvas { border: 1px solid #333; }
     }
   </style>
 </head>
 <body>
 
 <div class="wrapper">
-  <!-- logo container: fixed centering on all screen sizes -->
   <div class="logo-container">
-    <img src="YOUR_EPIC_LOGO_URL_HERE" class="logo" alt="EPIC Models & Talent logo" loading="lazy">
+    <!-- YOUR PROVIDED LOGO URL -->
+    <img src="https://assets.cdn.filesafe.space/YzjwmP6zpvDUp28hrM1o/media/687edb257f24c671f43bb1cb.png" class="logo" alt="EPIC Models & Talent logo">
   </div>
 
   <h1>EPIC Models & Talent<br>Model Release Agreement</h1>
@@ -362,55 +212,29 @@
     Contract ID: <span id="contractID"></span>
   </div>
 
-  <!-- two-column grid (EXACT EPIC content from first agreement) -->
   <div class="grid">
-    <!-- left column: Scope of Work, On-Set Conduct, Rights & Usage -->
     <div>
       <h3>1. Scope of Work</h3>
-      <p>
-        Model agrees to participate in a photo and video shoot on April 7, 2026,
-        from 9:30 AM – 11:30 AM at M Resort Spa Casino, Henderson, Nevada.
-      </p>
-      <p>
-        Model must arrive by <strong>9:15 AM</strong> and meet in the main parking lot.
-        Model agrees to arrive at least 15 minutes early and be fully ready to shoot.
-      </p>
-      <p>
-        Content will include posed and candid lifestyle footage within the pool area.
-        Model is responsible for wardrobe, hair, and makeup.
-      </p>
+      <p>Model agrees to participate in a photo and video shoot on April 7, 2026, from 9:30 AM – 11:30 AM at M Resort Spa Casino, Henderson, Nevada.</p>
+      <p>Model must arrive by <strong>9:15 AM</strong> and meet in the main parking lot. Model agrees to arrive at least 15 minutes early and be fully ready to shoot.</p>
+      <p>Content will include posed and candid lifestyle footage within the pool area. Model is responsible for wardrobe, hair, and makeup.</p>
 
       <h3>2. On-Set Conduct</h3>
-      <p>
-        <strong>No photos or videos are permitted on set at any time.</strong>
-        Model agrees to follow all direction and maintain professional conduct.
-      </p>
+      <p><strong>No photos or videos are permitted on set at any time.</strong> Model agrees to follow all direction and maintain professional conduct.</p>
 
       <h3>3. Rights & Usage</h3>
-      <p>
-        Model grants EPIC Models & Talent unrestricted, worldwide rights to use all
-        photo and video content for marketing, advertising, and commercial use.
-      </p>
+      <p>Model grants EPIC Models & Talent unrestricted, worldwide rights to use all photo and video content for marketing, advertising, and commercial use.</p>
     </div>
 
-    <!-- right column: Limitations, Compensation, Ownership, Social Media Restrictions -->
     <div>
       <h3>4. Limitations</h3>
-      <p>
-        Content will not be altered in a defamatory, illegal, or pornographic way.
-        Model name and personal information will not be used without consent.
-      </p>
+      <p>Content will not be altered in a defamatory, illegal, or pornographic way. Model name and personal information will not be used without consent.</p>
 
       <h3>5. Compensation</h3>
-      <p>
-        Model will be paid upon completion of the shoot. Payment method will be agreed upon.
-      </p>
+      <p>Model will be paid upon completion of the shoot. Payment method will be agreed upon.</p>
 
       <h3>6. Ownership</h3>
-      <p>
-        All content is the exclusive property of EPIC Models & Talent and/or its clients.
-        Model retains no ownership rights.
-      </p>
+      <p>All content is the exclusive property of EPIC Models & Talent and/or its clients. Model retains no ownership rights.</p>
 
       <h3>7. Social Media Restrictions</h3>
       <ul>
@@ -424,15 +248,13 @@
     </div>
   </div>
 
-  <!-- signature form section (full responsive fields & signature pad) -->
   <div class="form-section" id="formSection">
-    <h2 style="color:#d4af37;">Model Information</h2>
+    <h2>Model Information</h2>
+    <input type="text" id="name" placeholder="Full Name *">
+    <input type="email" id="email" placeholder="Email Address *">
+    <input type="text" id="phone" placeholder="Phone (Optional)">
 
-    <input type="text" id="name" placeholder="Full Name *" autocomplete="off">
-    <input type="email" id="email" placeholder="Email Address *" autocomplete="off">
-    <input type="text" id="phone" placeholder="Phone (Optional)" autocomplete="off">
-
-    <h3 style="color:#d4af37;">Signature</h3>
+    <h3>Signature</h3>
     <canvas id="signature-pad"></canvas>
 
     <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px;">
@@ -441,17 +263,15 @@
     </div>
   </div>
 
-  <!-- success message (hidden initially) -->
   <div id="successMessage" class="success">
-    <h2 style="color:#d4af37;">Agreement Submitted Successfully</h2>
+    <h2>Agreement Submitted Successfully</h2>
     <p>A copy of your agreement has been emailed to you.</p>
   </div>
-
 </div>
 
 <script>
   (function() {
-    // ---------- CONTRACT ID GENERATION (EPIC format) ----------
+    // Generate Contract ID
     function generateContractID() {
       const now = new Date();
       const y = now.getFullYear();
@@ -463,7 +283,7 @@
     const contractID = generateContractID();
     document.getElementById('contractID').innerText = contractID;
 
-    // ---------- SIGNATURE PAD (robust touch + resize from second file) ----------
+    // Signature Pad
     const canvas = document.getElementById('signature-pad');
     const ctx = canvas.getContext('2d');
     let drawing = false;
@@ -474,19 +294,15 @@
       canvas.height = rect.height;
       ctx.lineWidth = 2.5;
       ctx.lineCap = 'round';
-      ctx.lineJoin = 'round';
       ctx.strokeStyle = '#000';
-      // preserve white background after resize
       ctx.fillStyle = '#fff';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
     }
 
-    window.addEventListener('resize', () => {
-      resizeCanvas();
-    });
+    window.addEventListener('resize', resizeCanvas);
     resizeCanvas();
 
-    function getCoordinates(e) {
+    function getCoords(e) {
       const rect = canvas.getBoundingClientRect();
       let clientX, clientY;
       if (e.touches) {
@@ -496,21 +312,18 @@
         clientX = e.clientX;
         clientY = e.clientY;
       }
-      return {
-        x: clientX - rect.left,
-        y: clientY - rect.top
-      };
+      return { x: clientX - rect.left, y: clientY - rect.top };
     }
 
-    function startDrawing(e) {
+    function start(e) {
       e.preventDefault();
       drawing = true;
       ctx.beginPath();
-      const { x, y } = getCoordinates(e);
+      const { x, y } = getCoords(e);
       ctx.moveTo(x, y);
     }
 
-    function stopDrawing() {
+    function stop() {
       drawing = false;
       ctx.beginPath();
     }
@@ -518,24 +331,22 @@
     function draw(e) {
       if (!drawing) return;
       e.preventDefault();
-      const { x, y } = getCoordinates(e);
+      const { x, y } = getCoords(e);
       ctx.lineTo(x, y);
       ctx.stroke();
       ctx.beginPath();
       ctx.moveTo(x, y);
     }
 
-    canvas.addEventListener('mousedown', startDrawing);
-    canvas.addEventListener('mouseup', stopDrawing);
-    canvas.addEventListener('mouseout', stopDrawing);
+    canvas.addEventListener('mousedown', start);
+    canvas.addEventListener('mouseup', stop);
+    canvas.addEventListener('mouseout', stop);
     canvas.addEventListener('mousemove', draw);
-
-    canvas.addEventListener('touchstart', startDrawing, { passive: false });
-    canvas.addEventListener('touchend', stopDrawing);
-    canvas.addEventListener('touchcancel', stopDrawing);
+    canvas.addEventListener('touchstart', start, { passive: false });
+    canvas.addEventListener('touchend', stop);
+    canvas.addEventListener('touchcancel', stop);
     canvas.addEventListener('touchmove', draw, { passive: false });
 
-    // expose clear function globally
     window.clearSignature = function() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       ctx.fillStyle = '#fff';
@@ -543,12 +354,8 @@
       ctx.beginPath();
     };
 
-    // initial white background
-    ctx.fillStyle = '#fff';
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-    // ---------- FORM SUBMISSION (CORRECTED Web App URL) ----------
-    // Your provided Google Apps Script URL (directly integrated)
+    // Submit to Google Apps Script
+    // ⚠️ REPLACE THIS URL WITH YOUR DEPLOYED WEB APP URL ⚠️
     const WEBAPP_URL = 'https://script.google.com/macros/s/AKfycbx-gWdzMO1oN6bNRJ2huOZgYgtfE23_GrclWxQlsJ1Dycn7GsWY20DWMv5b41k0wsP3kg/exec';
 
     window.submitAgreement = async function() {
@@ -561,37 +368,28 @@
         return;
       }
 
-      // check if signature is not empty (canvas dataURL length)
       if (canvas.toDataURL().length < 2500) {
         alert('Please provide your signature by drawing in the box above.');
         return;
       }
 
       const signatureData = canvas.toDataURL();
-
       let ip = 'unavailable';
       try {
         const resp = await fetch('https://api.ipify.org?format=json');
         const data = await resp.json();
         ip = data.ip;
-      } catch (e) {
-        console.warn('Could not fetch IP:', e);
-      }
+      } catch (e) { console.warn(e); }
 
       const payload = {
-        contractID: contractID,
-        name: name,
-        email: email,
-        phone: phone,
+        contractID, name, email, phone,
         signature: signatureData,
-        ip: ip,
+        ip,
         userAgent: navigator.userAgent,
         timestamp: new Date().toISOString()
       };
 
-      // Disable submit button to avoid double submission (optional improvement)
       const submitBtn = document.querySelector('button[onclick="submitAgreement()"]');
-      const originalText = submitBtn ? submitBtn.innerText : 'Submit';
       if (submitBtn) {
         submitBtn.disabled = true;
         submitBtn.innerText = 'Submitting...';
@@ -600,62 +398,30 @@
       try {
         const response = await fetch(WEBAPP_URL, {
           method: 'POST',
-          mode: 'cors',               // explicit cors mode
+          mode: 'cors',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload)
         });
 
-        let result;
-        try {
-          result = await response.json();
-        } catch (e) {
-          result = { status: 'error', message: 'Invalid JSON response from server' };
-        }
+        const result = await response.json();
 
-        if (response.ok && result && result.status === 'success') {
-          // success: hide form, show success message
-          const formSection = document.getElementById('formSection');
-          formSection.style.opacity = '0';
-          setTimeout(() => {
-            formSection.style.display = 'none';
-            const successEl = document.getElementById('successMessage');
-            successEl.classList.add('show');
-          }, 300);
+        if (response.ok && result.status === 'success') {
+          document.getElementById('formSection').style.display = 'none';
+          document.getElementById('successMessage').classList.add('show');
         } else {
-          // Provide detailed error if possible
-          const errorMsg = result?.message || `Server responded with ${response.status}: ${response.statusText}`;
-          alert(`Submission failed: ${errorMsg}\n\nPlease try again or contact support.`);
-          console.error('Server error details:', result);
+          throw new Error(result.message || 'Server error');
         }
       } catch (err) {
-        console.error('Network/Fetch error:', err);
-        alert(`Network error — unable to reach server.\n\nDetails: ${err.message}\n\nPlease check your internet connection and ensure the Google Apps Script is deployed to run as "Anyone" (including anonymous).`);
+        console.error(err);
+        alert(`Network error — unable to reach server.\n\n${err.message}\n\nMake sure the Google Apps Script is deployed with "Anyone" access and you are using the latest Web App URL.`);
       } finally {
-        // Re-enable submit button if still visible (form not hidden)
         if (submitBtn && document.getElementById('formSection').style.display !== 'none') {
           submitBtn.disabled = false;
-          submitBtn.innerText = originalText;
+          submitBtn.innerText = '✓ Submit Agreement';
         }
       }
     };
   })();
-
-  // extra safety: re-trigger canvas sizing after fonts/images fully load
-  window.addEventListener('load', function() {
-    const canvas = document.getElementById('signature-pad');
-    if (canvas) {
-      const rect = canvas.getBoundingClientRect();
-      canvas.width = rect.width;
-      canvas.height = rect.height;
-      const ctx = canvas.getContext('2d');
-      ctx.lineWidth = 2.5;
-      ctx.lineCap = 'round';
-      ctx.strokeStyle = '#000';
-      ctx.fillStyle = '#fff';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-    }
-  });
 </script>
-
 </body>
 </html>
